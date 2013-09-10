@@ -1,0 +1,13 @@
+set mol [mol new 1NZOwb.pdb type pdb waitfor all] 
+set toppdb [atomselect top protein] 
+set everyone [atomselect top all] 
+measure minmax $everyone 
+measure center $everyone 
+set minmax [measure minmax $everyone] 
+set vec [vecsub [lindex $minmax 1] [lindex $minmax 0]] 
+puts "cellBasisVector1 [lindex $vec 0] 0 0" 
+puts "cellBasisVector2 0 [lindex $vec 1] 0" 
+puts "cellBasisVector3 0 0 [lindex $vec 2]" 
+set center [measure center $everyone] 
+puts "cellOrigin $center" 
+exit

@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Thu  7 Mar 2013 10:54:06
+# Commandline: needle
+#    -gapopen 10
+#    -gapextend 0.5
+#    -outfile /tmp/needle.out
+#    [-asequence] ///home/data/FASTADIR//1O7E.ALL.Q9RBQ1.fasta
+#    [-bsequence] ///home/data/FASTADIR//1O7E.ALL.Q9RBQ1.fasta
+# Align_format: srspair
+# Report_file: /tmp/needle.out
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: Q9RBQ1_STEMA
+# 2: Q9RBQ1_STEMA
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 303
+# Identity:     303/303 (100.0%)
+# Similarity:   303/303 (100.0%)
+# Gaps:           0/303 ( 0.0%)
+# Score: 1523.0
+# 
+#
+#=======================================
+
+Q9RBQ1_STEMA       1 MLARRRFLQFSGAAVASSLALPLLARAAGKATANAPTDAAITAASDFAAL     50
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA       1 MLARRRFLQFSGAAVASSLALPLLARAAGKATANAPTDAAITAASDFAAL     50
+
+Q9RBQ1_STEMA      51 EKACAGRLGVTLLDTASGRRIGHRQDERFPMCSTFKSMLAATVLSQAERM    100
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA      51 EKACAGRLGVTLLDTASGRRIGHRQDERFPMCSTFKSMLAATVLSQAERM    100
+
+Q9RBQ1_STEMA     101 PALLDRRVPVGEADLLSHAPVTRRHAGKDMTVRDLCRATIITSDNTAANL    150
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA     101 PALLDRRVPVGEADLLSHAPVTRRHAGKDMTVRDLCRATIITSDNTAANL    150
+
+Q9RBQ1_STEMA     151 LFGVVGGPPAVTAFLRASGDTVSRSDRLEPELNSFAKGDPRDTTTPAAMA    200
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA     151 LFGVVGGPPAVTAFLRASGDTVSRSDRLEPELNSFAKGDPRDTTTPAAMA    200
+
+Q9RBQ1_STEMA     201 ATLQRVVLGEVLQPASRQQLADWLIDNETGDACLRAGLGKRWRVGDKTGS    250
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA     201 ATLQRVVLGEVLQPASRQQLADWLIDNETGDACLRAGLGKRWRVGDKTGS    250
+
+Q9RBQ1_STEMA     251 NGEDARNDIAVLWPVAGGAPWVLTAYLQAGAISYEQRASVLAQVGRIADR    300
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+Q9RBQ1_STEMA     251 NGEDARNDIAVLWPVAGGAPWVLTAYLQAGAISYEQRASVLAQVGRIADR    300
+
+Q9RBQ1_STEMA     301 LIG    303
+                     |||
+Q9RBQ1_STEMA     301 LIG    303
+
+
+#---------------------------------------
+#---------------------------------------

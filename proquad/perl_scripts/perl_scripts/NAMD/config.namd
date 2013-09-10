@@ -1,0 +1,17 @@
+PDB = 1NZO ;  # pdb 
+PDBNoH = 1NZONoH ;  # pdb 
+PDBALIAS = pdbalias
+
+PARAMFILE1 = top_all27_prot_lipid.inp
+PARAMFILE2 = par_all27_prot_lipid.inp
+
+PDBPSF = 1NZOpsf
+PDBWB = 1NZOwb
+PDBWBPSF = 1NZOwb
+WATERLAYER = 5
+
+TEMP = 310 
+OUTPUTNAME 1NZOoutput
+TIMESTEP = 2.0
+CYCLES = 225000
+MINIMIZECYCLES = 100 

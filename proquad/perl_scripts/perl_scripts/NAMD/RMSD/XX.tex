@@ -1,0 +1,27 @@
+\documentclass{article} 
+\usepackage{tikz} 
+\usepackage{pgfplots} 
+\usepackage{verbatim} 
+\usepgfplotslibrary{groupplots} % LTEX and plain TEX 
+\usepgfplotslibrary[groupplots] % ConTEXt 
+\usetikzlibrary{pgfplots.groupplots} % LTEX and plain TEX 
+\usetikzlibrary[pgfplots.groupplots] % ConTEXt 
+\usetikzlibrary{patterns}
+\begin{document} 
+\pagestyle{empty} 
+\begin{tikzpicture} 
+\begin{axis}[ 
+grid=minor, 
+xlabel=Steps,
+ylabel=Rmsd] 
+%\addplot[only marks,mark=+,color=red] file {/home/sandeepc/Motifs/sorted.counter} ; 
+\addplot[only marks,mark=+,color=red] file {A};
+\addlegendentry{RMSD}
+
+\addlegendentry{$\delta$V in $\beta$-lactamases active sites}
+
+
+\end{axis} 
+\end{tikzpicture} 
+ 
+\end{document} 

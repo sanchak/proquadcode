@@ -1,0 +1,283 @@
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" language="JavaScript">
+
+	function searchCitationAuthor(author, primary)
+	{
+			document.queryCitationAuthorForm.elements['citation_author.name.value'].value = author;
+			document.queryCitationAuthorForm.elements['citation_author.name.comparator'].value = "equals";
+			if (primary)
+				document.queryCitationAuthorForm.elements['citation_author.citation_id.value'].value="primary";
+			document.queryCitationAuthorForm.submit();
+	}
+
+	function searchStructureAuthor(author)
+	{
+			document.queryStructureAuthorForm.elements['audit_author.name'].value = author;
+			document.queryStructureAuthorForm.elements['audit_author.name.comparator'].value = "equals";
+			document.queryStructureAuthorForm.submit();
+	}
+
+	function searchPdbxKeyword(keyword)
+	{
+	  document.queryKeywordsForm.elements['struct_keywords.pdbx_keywords.value'].value = keyword;
+	  document.queryKeywordsForm.submit();
+	}
+
+	function searchEc(ec)
+	{
+			document.ecQueryForm.elements['Enzyme_Classification'].value = ec;
+			document.ecQueryForm.submit();
+	}
+	function searchSpaceGroup(sg)
+	{
+		document.sgQueryForm.elements['symmetry.space_group_name_H-M.value'].value = sg;
+		document.sgQueryForm.elements['symmetry.space_group_name_H-M.comparator'].value = "=";
+		document.sgQueryForm.submit();
+	}
+
+	function searchSource(natSci, natCommon, genSci, genCommon, hostSci)
+	{
+		document.srcQueryForm.elements['entity_src_nat.pdbx_organism_scientific.value'].value = natSci;
+		document.srcQueryForm.elements['entity_src_nat.common_name.value'].value = natCommon;
+		document.srcQueryForm.elements['entity_src_gen.pdbx_gene_src_scientific_name.value'].value = genSci;
+		document.srcQueryForm.elements['entity_src_gen.gene_src_common_name.value'].value = genCommon;
+		document.srcQueryForm.elements['entity_src_gen.pdbx_host_org_scientific_name.value'].value = hostSci;
+		document.srcQueryForm.submit();
+	}
+
+	function searchSGCenterName(sgCenterName)
+	{
+		document.sgProjectQueryForm.elements['pdbx_SG_project.full_name_of_center.value'].value = sgCenterName;
+		document.sgProjectQueryForm.submit();
+	}
+						
+	var abstractIn = new String('A class C beta-lactamase from a clinical isolate of Enterobacter cloacae strain GC1 with improved hydrolytic activity for oxyimino beta-lactam antibiotics has been analyzed by X-ray crystallography to 1.8 A resolution. Relative to the wild-type P99 beta-lactamase, this natural mutant contains a highly unique tandem repeat Ala211-Val212-Arg213 [Nugaka et al. (1995) J. Biol. Chem. 270, 5729-5735]. The 39.4 kDa chromosomal beta-lactamase crystallizes from poly(ethylene glycol) 8000 in potassium phosphate in space group P2(1)2(1)2 with cell dimensions a = 78.0 A, b = 69.5 A, and c = 63.1 A. The crystal structure was solved by the molecular replacement method, and the model has been refined to an R-factor of 0.20 for all nonzero data from 8 to 1.8 A. Deviations of model bonds and angles from ideal values are 0.008 A and 1.4 degrees, respectively. Overlay of alpha-carbon atoms in the GC1 and P99 beta-lactamases results in an rms deviation of 0.6 A. Largest deviations occur in a loop containing Gln120 and in the Omega loop region (200-218) where the three residues 213-215 are disordered. Possibly as a result of this disorder, the width of the opening to the substrate binding cavity, as measured from the 318-324 beta-strand to two loops containing Gln120 and Tyr150 on the other side, is 0.6-1.4 A wider than in P99. It is suggested that conformational flexibility in the expanded Omega loop, and its influence on adjacent protein structure, may facilitate hydrolysis of oxyimino beta-lactams by making the acyl intermediate more open to attack by water. Nevertheless, backbone atoms in core catalytic site residues Ser64, Lys67, Tyr150, Asn152, Lys318, and Ser321 deviate only 0.4 A (rmsd) from atoms in P99. A rotation of a potential catalytic base, Tyr150, relative to P99 at pH 8, is consistent with the requirement for a lower than normal pK(a) for this residue.');
+	var keywordsIn = new String('Amino Acid Sequence, Catalytic Domain, Cephalosporins, Computer Simulation, Crystallography, X-Ray, Enterobacter cloacae, Humans, Models, Molecular, Molecular Sequence Data, Mutation, Peptide Fragments, Protein Structure, Tertiary, Tandem Repeat Sequences, beta-Lactamases');	
+	var titleIn = new String('Structure of the extended-spectrum class C beta-lactamase of Enterobacter cloacae GC1, a natural mutant with a tandem tripeptide insertion.');
+</script>
+
+<script type="text/javascript" language="JavaScript" src="/pdb/common/lib/abstract.js"></script>
+							
+<form action="/pdb/search/smartSubquery.do" method="get" name="queryCitationAuthorForm">
+			
+	<input type="hidden" name="citation_author.name.value" value="" />
+
+	<input type="hidden" name="citation_author.name.comparator" value="contains" />
+
+	<input type="hidden" name="citation_author.citation_id.value" value="" />
+
+	<input type="hidden" name="smartSearchSubtype" value="CitationAuthorQuery" />
+
+	<input type="hidden" name="display" value="true" />
+
+</form>
+
+<form action="/pdb/search/smartSubquery.do" method="get" name="sgProjectQueryForm">
+	
+	<input type="hidden" name="pdbx_SG_project.full_name_of_center.value" value="" />
+	
+	<input type="hidden" name="smartSearchSubtype" value="SGProjectQuery" />
+	
+</form>
+		
+
+<form action="/pdb/search/smartSubquery.do" method="post" name="queryForm">
+	
+	<p><span id="se_abstractTitle"><a onclick="c(0);">Structure</a> of the <a onclick="c(3);">extended-spectrum</a> <a onclick="c(4);">class</a> C <a onclick="c(6);">beta-lactamase</a> of <a onclick="c(8);">Enterobacter</a> <a onclick="c(9);">cloacae</a> <a onclick="c(10);">GC1,</a> a <a onclick="c(12);">natural</a> <a onclick="c(13);">mutant</a> with a <a onclick="c(16);">tandem</a> <a onclick="c(17);">tripeptide</a> <a onclick="c(18);">insertion.</a></span></p>
+
+
+														
+	<p><a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Crichlow, G.V.', true);">Crichlow, G.V.</a>,&nbsp;&nbsp; <a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Kuzin, A.P.', true);">Kuzin, A.P.</a>,&nbsp;&nbsp; <a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Nukaga, M.', true);">Nukaga, M.</a>,&nbsp;&nbsp; <a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Mayama, K.', true);">Mayama, K.</a>,&nbsp;&nbsp; <a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Sawai, T.', true);">Sawai, T.</a>,&nbsp;&nbsp; <a class="sePrimarycitations se_searchLink" onclick="searchCitationAuthor('Knox, J.R.', true);">Knox, J.R.</a></p>
+ 
+	<p>
+
+		<b>Journal:</b>
+		
+
+
+		(1999)
+
+
+
+		<span class="se_journal">Biochemistry</span>
+
+
+
+		<span class="se_journal"><b>38: </b>10256-10261</span> 
+		
+	</p>
+
+	
+	
+	<div style="margin:10px 0;">
+		
+		<b>PubMed:</b> 
+		
+		<a class="se_datalarge" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=10441119" target="_blank">
+	
+			10441119
+
+			<span class="iconSet-main icon-external" title="View PubMed Abstract at NCBI">&nbsp;</span>			
+					
+		</a>
+					
+
+
+		<br />
+					
+		<b>DOI:</b>
+						
+		<a href="http://dx.doi.org/10.1021/bi9908787" target="_blank">
+
+			10.1021/bi9908787
+
+			<span class="iconSet-main icon-external" title="View Article">&nbsp;</span>
+						
+		</a>
+
+
+
+		<br />
+		
+		<b>Search Related Articles in</b>
+		
+		<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?itool=pubmed_DocSum&amp;db=pubmed&amp;cmd=Display&amp;dopt=pubmed_pubmed&amp;from_uid=10441119" target="_blank"> 
+					
+			 PubMed <span class="iconSet-main icon-search" title="Search Related Articles in Pubmed">&nbsp;</span>
+						
+		</a>
+
+	</div>
+
+
+
+	
+
+	
+	
+		<span class="se_abstractHead">PubMed Abstract: </span>
+
+		<div id="se_abstractPart">	
+	
+			<div id="se_abstractTeaser">
+					
+				A class C beta-lactamase from a clinical isolate of Enterobacter cloacae strain GC1 with improved hydrolytic activity for oxyimino beta-lactam antibiotics has been analyzed by X-ray crystallography to 1.8 A resolution. Relative to the wild-type P99 beta-lactamase, this natural mutant... 
+												
+				<a href="#" id="se_Abstract_Show" onclick="toggleDiv('se_abstractPart'); toggleDiv('se_abstractFull'); return false;">
+	
+					<span style="white-space: nowrap">[ Read More &amp; Search PubMed Abstracts ]</span>
+	
+				</a>
+					
+			</div>
+					
+		</div>
+				
+		<div id="se_abstractFull" style="display: none">
+	
+			<span class="se_abstract">A <a onclick="a(1);">class</a> C <a onclick="a(3);">beta-lactamase</a> <a onclick="a(4);">from</a> a <a onclick="a(6);">clinical</a> <a onclick="a(7);">isolate</a> of <a onclick="a(9);">Enterobacter</a> <a onclick="a(10);">cloacae</a> <a onclick="a(11);">strain</a> <a onclick="a(12);">GC1</a> with <a onclick="a(14);">improved</a> <a onclick="a(15);">hydrolytic</a> <a onclick="a(16);">activity</a> for <a onclick="a(18);">oxyimino</a> <a onclick="a(19);">beta-lactam</a> <a onclick="a(20);">antibiotics</a> <a onclick="a(21);">has</a> <a onclick="a(22);">been</a> <a onclick="a(23);">analyzed</a> by <a onclick="a(25);">X-ray</a> <a onclick="a(26);">crystallography</a> to <a onclick="a(28);">1.8</a> A <a onclick="a(30);">resolution.</a> <a onclick="a(31);">Relative</a> to the <a onclick="a(34);">wild-type</a> <a onclick="a(35);">P99</a> <a onclick="a(36);">beta-lactamase,</a> this <a onclick="a(38);">natural</a> <a onclick="a(39);">mutant</a> <a onclick="a(40);">contains</a> a <a onclick="a(42);">highly</a> <a onclick="a(43);">unique</a> <a onclick="a(44);">tandem</a> <a onclick="a(45);">repeat</a> <a onclick="a(46);">Ala211-Val212-Arg213</a> <a onclick="a(47);">[Nugaka</a> et <a onclick="a(49);">al.</a> <a onclick="a(50);">(1995)</a> <a onclick="a(51);">J.</a> <a onclick="a(52);">Biol.</a> <a onclick="a(53);">Chem.</a> <a onclick="a(54);">270,</a> <a onclick="a(55);">5729-5735].</a> The <a onclick="a(57);">39.4</a> <a onclick="a(58);">kDa</a> <a onclick="a(59);">chromosomal</a> <a onclick="a(60);">beta-lactamase</a> <a onclick="a(61);">crystallizes</a> <a onclick="a(62);">from</a> <a onclick="a(63);">poly(ethylene</a> <a onclick="a(64);">glycol)</a> <a onclick="a(65);">8000</a> in <a onclick="a(67);">potassium</a> <a onclick="a(68);">phosphate</a> in <a onclick="a(70);">space</a> <a onclick="a(71);">group</a> <a onclick="a(72);">P2(1)2(1)2</a> with <a onclick="a(74);">cell</a> <a onclick="a(75);">dimensions</a> a = <a onclick="a(78);">78.0</a> <a onclick="a(79);">A,</a> b = <a onclick="a(82);">69.5</a> <a onclick="a(83);">A,</a> <a onclick="a(84);">and</a> c = <a onclick="a(87);">63.1</a> <a onclick="a(88);">A.</a> The <a onclick="a(90);">crystal</a> <a onclick="a(91);">structure</a> was <a onclick="a(93);">solved</a> by the <a onclick="a(96);">molecular</a> <a onclick="a(97);">replacement</a> <a onclick="a(98);">method,</a> <a onclick="a(99);">and</a> the <a onclick="a(101);">model</a> <a onclick="a(102);">has</a> <a onclick="a(103);">been</a> <a onclick="a(104);">refined</a> to <a onclick="a(106);">an</a> <a onclick="a(107);">R-factor</a> of <a onclick="a(109);">0.20</a> for <a onclick="a(111);">all</a> <a onclick="a(112);">nonzero</a> <a onclick="a(113);">data</a> <a onclick="a(114);">from</a> 8 to <a onclick="a(117);">1.8</a> <a onclick="a(118);">A.</a> <a onclick="a(119);">Deviations</a> of <a onclick="a(121);">model</a> <a onclick="a(122);">bonds</a> <a onclick="a(123);">and</a> <a onclick="a(124);">angles</a> <a onclick="a(125);">from</a> <a onclick="a(126);">ideal</a> <a onclick="a(127);">values</a> are <a onclick="a(129);">0.008</a> A <a onclick="a(131);">and</a> <a onclick="a(132);">1.4</a> <a onclick="a(133);">degrees,</a> <a onclick="a(134);">respectively.</a> <a onclick="a(135);">Overlay</a> of <a onclick="a(137);">alpha-carbon</a> <a onclick="a(138);">atoms</a> in the <a onclick="a(141);">GC1</a> <a onclick="a(142);">and</a> <a onclick="a(143);">P99</a> <a onclick="a(144);">beta-lactamases</a> <a onclick="a(145);">results</a> in <a onclick="a(147);">an</a> <a onclick="a(148);">rms</a> <a onclick="a(149);">deviation</a> of <a onclick="a(151);">0.6</a> <a onclick="a(152);">A.</a> <a onclick="a(153);">Largest</a> <a onclick="a(154);">deviations</a> <a onclick="a(155);">occur</a> in a <a onclick="a(158);">loop</a> <a onclick="a(159);">containing</a> <a onclick="a(160);">Gln120</a> <a onclick="a(161);">and</a> in the <a onclick="a(164);">Omega</a> <a onclick="a(165);">loop</a> <a onclick="a(166);">region</a> <a onclick="a(167);">(200-218)</a> <a onclick="a(168);">where</a> the <a onclick="a(170);">three</a> <a onclick="a(171);">residues</a> <a onclick="a(172);">213-215</a> are <a onclick="a(174);">disordered.</a> <a onclick="a(175);">Possibly</a> as a <a onclick="a(178);">result</a> of this <a onclick="a(181);">disorder,</a> the <a onclick="a(183);">width</a> of the <a onclick="a(186);">opening</a> to the <a onclick="a(189);">substrate</a> <a onclick="a(190);">binding</a> <a onclick="a(191);">cavity,</a> as <a onclick="a(193);">measured</a> <a onclick="a(194);">from</a> the <a onclick="a(196);">318-324</a> <a onclick="a(197);">beta-strand</a> to <a onclick="a(199);">two</a> <a onclick="a(200);">loops</a> <a onclick="a(201);">containing</a> <a onclick="a(202);">Gln120</a> <a onclick="a(203);">and</a> <a onclick="a(204);">Tyr150</a> on the <a onclick="a(207);">other</a> <a onclick="a(208);">side,</a> is <a onclick="a(210);">0.6-1.4</a> A <a onclick="a(212);">wider</a> <a onclick="a(213);">than</a> in <a onclick="a(215);">P99.</a> It is <a onclick="a(218);">suggested</a> that <a onclick="a(220);">conformational</a> <a onclick="a(221);">flexibility</a> in the <a onclick="a(224);">expanded</a> <a onclick="a(225);">Omega</a> <a onclick="a(226);">loop,</a> <a onclick="a(227);">and</a> <a onclick="a(228);">its</a> <a onclick="a(229);">influence</a> on <a onclick="a(231);">adjacent</a> <a onclick="a(232);">protein</a> <a onclick="a(233);">structure,</a> <a onclick="a(234);">may</a> <a onclick="a(235);">facilitate</a> <a onclick="a(236);">hydrolysis</a> of <a onclick="a(238);">oxyimino</a> <a onclick="a(239);">beta-lactams</a> by <a onclick="a(241);">making</a> the <a onclick="a(243);">acyl</a> <a onclick="a(244);">intermediate</a> <a onclick="a(245);">more</a> <a onclick="a(246);">open</a> to <a onclick="a(248);">attack</a> by <a onclick="a(250);">water.</a> <a onclick="a(251);">Nevertheless,</a> <a onclick="a(252);">backbone</a> <a onclick="a(253);">atoms</a> in <a onclick="a(255);">core</a> <a onclick="a(256);">catalytic</a> <a onclick="a(257);">site</a> <a onclick="a(258);">residues</a> <a onclick="a(259);">Ser64,</a> <a onclick="a(260);">Lys67,</a> <a onclick="a(261);">Tyr150,</a> <a onclick="a(262);">Asn152,</a> <a onclick="a(263);">Lys318,</a> <a onclick="a(264);">and</a> <a onclick="a(265);">Ser321</a> <a onclick="a(266);">deviate</a> <a onclick="a(267);">only</a> <a onclick="a(268);">0.4</a> A <a onclick="a(270);">(rmsd)</a> <a onclick="a(271);">from</a> <a onclick="a(272);">atoms</a> in <a onclick="a(274);">P99.</a> A <a onclick="a(276);">rotation</a> of a <a onclick="a(279);">potential</a> <a onclick="a(280);">catalytic</a> <a onclick="a(281);">base,</a> <a onclick="a(282);">Tyr150,</a> <a onclick="a(283);">relative</a> to <a onclick="a(285);">P99</a> at pH <a onclick="a(288);">8,</a> is <a onclick="a(290);">consistent</a> with the <a onclick="a(293);">requirement</a> for a <a onclick="a(296);">lower</a> <a onclick="a(297);">than</a> <a onclick="a(298);">normal</a> <a onclick="a(299);">pK(a)</a> for this <a onclick="a(302);">residue.</a></span>
+			
+			<br /><br />
+			
+			<span class="se_abstractHead">Keywords: </span>
+			
+			<br />
+					
+			<span class="se_abstract"><a onclick="b(0);">Amino Acid Sequence</a>, <a onclick="b(1);"> Catalytic Domain</a>, <a onclick="b(2);"> Cephalosporins</a>, <a onclick="b(3);"> Computer Simulation</a>, <a onclick="b(4);"> Crystallography</a>, <a onclick="b(5);"> X-Ray</a>, <a onclick="b(6);"> Enterobacter cloacae</a>, <a onclick="b(7);"> Humans</a>, <a onclick="b(8);"> Models</a>, <a onclick="b(9);"> Molecular</a>, <a onclick="b(10);"> Molecular Sequence Data</a>, <a onclick="b(11);"> Mutation</a>, <a onclick="b(12);"> Peptide Fragments</a>, <a onclick="b(13);"> Protein Structure</a>, <a onclick="b(14);"> Tertiary</a>, <a onclick="b(15);"> Tandem Repeat Sequences</a>, <a onclick="b(16);"> beta-Lactamases</a></span>
+			
+			<br /><br />
+	
+			
+			
+			
+	
+				<span class="se_abstractHead">Organizational Affiliation: </span>
+				
+				<br />
+	
+				<span>Department of Molecular and Cell Biology, The University of Connecticut, Storrs 06269-3125, USA.</span>
+				
+				<br /><br />
+							
+			
+					
+			<br />
+			
+			<span class="pubmed_instructions">Click on abstract words and keywords to add them to the search box.</span>
+			
+			<br />
+			
+			<input type="hidden" name="smartSearchSubtype" value="PubMedQuery" />
+			
+			<input type="text" style="width: 350px" name="inputPubMed_Value" class="textfield" />
+			
+			<input type="submit" value="Search PubMed Abstracts" class="searchbutton" />
+			 	
+			<br />
+					 	
+		 	<div class="rightCell">
+		 	
+		 		<a href="#" id="se_Abstract_Hide" onclick="toggleDiv('se_abstractPart'); toggleDiv('se_abstractFull'); return false;">
+						
+					<span style="white-space: nowrap">[Hide Abstract]</span>
+						
+				</a>
+		 	
+		 	</div>
+		 	
+		 </div>
+	 					
+	
+	
+</form>
+			
+<script type="text/javascript" language="JavaScript">
+		
+	setWidgetView('se_abstractPart','null'); 
+	setWidgetView('se_abstractFull','on');
+
+</script>
+
+
+	 
